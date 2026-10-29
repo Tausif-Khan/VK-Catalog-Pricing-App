@@ -115,6 +115,17 @@ export function CataloguePage({ prices }: Props) {
                 key={product.id}
                 className="rounded-lg border border-line bg-white p-4"
               >
+                {product.image && (
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    width={520}
+                    height={390}
+                    loading="lazy"
+                    className="mb-3 h-32 w-full rounded-md border border-line object-cover"
+                  />
+                )}
+
                 <div className="flex items-start justify-between gap-2">
                   <div>
                     <h2 className="text-sm font-semibold text-ink">{product.name}</h2>

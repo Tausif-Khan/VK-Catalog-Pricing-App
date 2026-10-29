@@ -32,6 +32,8 @@ export interface Product {
   page: number;
   /** Pricing unit shown with every price of this product. */
   unit: string;
+  /** Product photo from the company's own media library (public/products/). */
+  image?: string;
   /** Open-ended range note when the variant list is not exhaustive. */
   note?: string;
   variants: Variant[];
@@ -100,6 +102,7 @@ const COLOURED_NET_COLOURS = ['Green', 'Brown', 'Surmai', 'Chocolate'] as const;
 export const PRODUCTS: readonly Product[] = [
   {
     id: 'polyester-twine',
+    image: '/products/polyester-twine.webp',
     name: 'Polyester Twine',
     category: 'Twine',
     source: 'Manufactured',
@@ -111,6 +114,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'cord-twine',
+    image: '/products/cord-twine.webp',
     name: 'Cord Twine',
     category: 'Twine',
     source: 'Manufactured',
@@ -122,6 +126,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'twinepp-colour',
+    image: '/products/twinepp-colour.webp',
     name: 'TwinePP Colour Twine',
     category: 'Twine',
     source: 'Manufactured',
@@ -134,6 +139,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'polyester-cord-bobbin',
+    image: '/products/polyester-cord-bobbin.webp',
     name: 'Polyester Cord Bobbin',
     category: 'Synthetic Yarn & Cord',
     source: 'Imported',
@@ -145,6 +151,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'nylon-tyre-cord-fabric',
+    image: '/products/nylon-tyre-cord-fabric.webp',
     name: 'Nylon Tyre Cord Fabric',
     category: 'Tyre Cord',
     source: 'Imported',
@@ -157,6 +164,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'nylon-tyre-cord-bobbin',
+    image: '/products/nylon-tyre-cord-bobbin.webp',
     name: 'Nylon Tyre Cord Bobbin',
     category: 'Tyre Cord',
     source: 'Traded',
@@ -169,6 +177,7 @@ export const PRODUCTS: readonly Product[] = [
   {
     // Page number is printed as 11 in the PDF (the catalogue reuses 11 twice).
     id: 'polyester-multi-nets',
+    image: '/products/polyester-multi-nets.webp',
     name: 'Polyester Multi Nets (White)',
     category: 'Nets',
     source: 'Manufactured',
@@ -189,6 +198,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'pp-multi-nets',
+    image: '/products/pp-multi-nets.webp',
     name: 'PP Multi Nets',
     category: 'Nets',
     source: 'Manufactured',
@@ -201,6 +211,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'polyester-multi-nets-coloured',
+    image: '/products/polyester-multi-nets-coloured.webp',
     name: 'Polyester Multi Nets (Colour)',
     category: 'Nets',
     source: 'Manufactured',
@@ -217,6 +228,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'tyre-cord-nets',
+    image: '/products/tyre-cord-nets.webp',
     name: 'Tyre Cord Nets',
     category: 'Nets',
     source: 'Manufactured',
@@ -229,6 +241,7 @@ export const PRODUCTS: readonly Product[] = [
   },
   {
     id: 'braided-ropes-dori',
+    image: '/products/braided-ropes-dori.webp',
     name: 'Braided Ropes (Dori)',
     category: 'Rope',
     source: 'Manufactured',
