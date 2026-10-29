@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+/*
+ * Palette and type taken from vksynthetics.com (Astra theme customiser):
+ *   --ast-global-color-0 #d94948  button / accent red
+ *   --ast-global-color-2 #011627  headings + dark text
+ *   --ast-global-color-3 rgba(1,22,39,.75)  body text
+ *   #eeeeee neutral, Montserrat for headings, body and buttons.
+ */
+@theme {
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-brand: #d94948;
+  --color-brand-dark: #c43f3e;
+  --color-ink: #011627;
+  --color-ink-soft: rgba(1, 22, 39, 0.75);
+  --color-ink-faint: rgba(1, 22, 39, 0.5);
+  --color-line: #eeeeee;
+  --color-canvas: #fbfbfb;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The live site runs Montserrat at 700 for every heading. */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+/* Form controls keep a consistent density across the three screens. */
+input,
+select,
+button {
+  font: inherit;
+}
